@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Course Home Page</title>
+    <meta name="description" content="Course home page for WDD 231: Web Frontend Development I">
+    <meta name="author" content="Elizabeth Ann Adjabeng">
+    <link rel="stylesheet" href="styles/course.css">
+    <link rel="stylesheet" href="styles/course-large.css">
+    <script src="scripts/course.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello!!</h1>
+    <header>
+        <img src="images/profile.webp" alt="Elizabeth Ann Adjabeng">
+        <span>Elizabeth Ann Adjabeng</span>
+        <button id="menu">☰</button>
+    </header>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="https://github.com/el-ann">GitHub Profile</a></li>
+            <li><a href="https://linkedin.com/in/elizabeth-ann-adjabeng-ba4212140">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>WDD 231: Web Frontend Development I</h1>
+        <div class="container">
+            <section id="coursework">
+                <h2>Coursework</h2>
+                <p>Welcome to my course home page. Here you will find information about the courses I am taking this semester:</p>
+                <ul>
+                    <li><strong>CSE 110:</strong> Introduction to Programming - This course introduces the basics of programming, including variables, decisions, loops, and arrays.</li>
+                    <li><strong>WDD 130:</strong> Web Fundamentals - This course covers the essentials of web design and development, focusing on HTML and CSS.</li>
+                    <li><strong>CSE 111:</strong> Programming with Functions - This course teaches how to write, call, debug, and test functions in programming.</li>
+                    <li><strong>CSE 210:</strong> Programming with Classes - This course introduces object-oriented programming concepts such as classes, inheritance, and polymorphism.</li>
+                    <li><strong>WDD 131:</strong> Dynamic Web Fundamentals - This course focuses on creating dynamic websites using JavaScript.</li>
+                    <li><strong>WDD 231:</strong> Frontend Web Development I - This course emphasizes user experience, accessibility, and performance optimization in web development.</li>
+                </ul>
+            </section>
+            <section class="country">
+                <h2>Accra, Ghana</h2>
+                <img src="images/country.webp" alt="Country of Ghana" width="300" height="200">
+                <figcaption>Independence Square</figcaption>
+            </section>
+        </div>
+        <section id="courses">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="course-buttons">
+                <button id="all-courses">All Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+            </div>
+            <div id="course-list"></div>  
+            <p>Total Credits: <span id="total-credits"></span></p>
+        </section> 
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 👩‍💻Elizabeth Ann Adjabeng👩‍💻 Ghana.</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

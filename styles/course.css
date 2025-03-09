@@ -1,0 +1,166 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0a350b;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header img {
+    border-radius: 5px; 
+    margin-right: 10px;
+    width: 90px;
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    background-color: #56c75a;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #327a34;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    padding: 20px;
+}
+
+#menu {
+    display: none;
+    background-color: #4caf4f55;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px; 
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
+}
+
+section h2 {
+    margin-top: 0;
+    padding: 1px 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+section img {
+    padding: 1rem;
+    display: block;
+    margin: auto;
+}
+
+section div {
+    padding: 1rem;
+}
+
+section figcaption {
+    padding: 1rem;
+    text-align: center;
+}
+
+#courses p {
+    padding: 15px;
+}
+
+#course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#coursework p {
+    padding: 15px;
+}
+
+#coursework ul {
+    list-style-type: none; 
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+#coursework li {
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+#coursework strong {
+    color: #007BFF;
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.course-button {
+    background-color: #f8d7da;
+    border: none;
+    padding: 10px;
+}
+
+footer {
+    background-color: #0a350b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
