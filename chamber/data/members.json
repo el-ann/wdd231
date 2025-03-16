@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Melcom Group",
+        "address": "1 Melcom Street, Accra, Ghana",
+        "phone": "+233 30 222 1676",
+        "website": "https://www.melcom.com.gh",
+        "image": "images/melcom.webp",
+        "membershipLevel": 2,
+        "additionalInfo": "Leading retail chain"
+    },
+    {
+        "name": "Accra Brewery",
+        "address": "8-12, Achimota Road, Accra, Ghana",
+        "phone": "+233 30 223 5690",
+        "website": "https://www.accra-brewery.com",
+        "image": "images/accra-brewery.webp",
+        "membershipLevel": 3,
+        "additionalInfo": "Quality beverages"
+    },
+    {
+        "name": "Ghana Commercial Bank",
+        "address": "High Street, Accra, Ghana",
+        "phone": "+233 30 266 4910",
+        "website": "https://www.gcbbank.com.gh",
+        "image": "images/gcb.webp",
+        "membershipLevel": 3,
+        "additionalInfo": "Premier banking services"
+    },
+    {
+        "name": "MTN Ghana",
+        "address": "Independence Avenue, Accra, Ghana",
+        "phone": "+233 24 430 0000",
+        "website": "https://www.mtn.com.gh",
+        "image": "images/mtn.webp",
+        "membershipLevel": 3,
+        "additionalInfo": "Leading telecom provider"
+    },
+    {
+        "name": "Buka Restaurant",
+        "address": "10th Lane, Osu, Accra, Ghana",
+        "phone": "+233 30 276 8593",
+        "website": "https://www.bukarestaurant.com",
+        "image": "images/buka.webp",
+        "membershipLevel": 1,
+        "additionalInfo": "Authentic Ghanaian cuisine"
+    },
+    {
+        "name": "Labadi Beach Hotel",
+        "address": "No. 1 La Bypass, Accra, Ghana",
+        "phone": "+233 30 277 2501",
+        "website": "https://www.labadibeachhotel.com",
+        "image": "images/labadi-beach.webp",
+        "membershipLevel": 2,
+        "additionalInfo": "Luxury beachfront accommodation"
+    },
+    {
+        "name": "Fan Milk Limited",
+        "address": "No. 3 Dadeban Road, Accra, Ghana",
+        "phone": "+233 30 222 1381",
+        "website": "https://www.fanmilk-gh.com",
+        "image": "images/fanmilk.webp",
+        "membershipLevel": 2,
+        "additionalInfo": "Dairy products manufacturer"
+    }
+]
