@@ -1,4 +1,4 @@
-/* Media Queries */
+
 @media (max-width: 768px) {
     #menu-toggle {
         display: block;
@@ -12,7 +12,6 @@
         position: absolute;
         top: 80px;
         left: 0;
-        padding: 1rem;
     }
     #nav-menu.open {
         display: flex;
@@ -20,19 +19,11 @@
     header {
         flex-wrap: wrap;
     }
-    #member-list.grid-view {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (min-width: 769px) {
     #nav-menu {
         display: flex;
-    }
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
     }
 }
 

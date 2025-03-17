@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse the member directory of the Accra Chamber of Commerce, connecting businesses in Accra, Ghana">
+    <meta name="description" content="Directory of members for the Accra Chamber of Commerce">
     <meta name="author" content="Elizabeth Ann Adjabeng">
-    <title>Accra Chamber of Commerce | Member Directory</title>
+    <title>Accra Chamber of Commerce | Members</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     
-    <meta property="og:title" content="Accra Chamber of Commerce | Member Directory">
+    <meta property="og:title" content="Accra Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/logo.webp">
-    <meta property="og:url" content="directory.html">
+    <meta property="og:url" content="https://www.accrachamberofcommerce.com/chamber/directory.html">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -27,9 +27,8 @@
     <header>
         <div class="logo">
             <img src="images/business-logo.webp" alt="Accra Chamber of Commerce Logo" loading="lazy">
-            <h1>Accra Chamber of Commerce</h1>
+            <h1>Accra<br>Chamber of Commerce</h1>
         </div>
-        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
         <nav id="nav-menu">
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -40,7 +39,36 @@
         </nav>
     </header>
 
+    <section class="hero">
+        <img src="images/hero-image.webp" alt="Accra Chamber of Commerce" loading="lazy">
+        <div class="hero-content">
+            <p>Find a member of the Accra Chamber of Commerce community.</p>
+        </div>
+    </section>
+
     <main>
+        <section id="info-boxes">
+            <div class="info-box">
+                <h2>Events</h2>
+                <p>Discover upcoming events and activities in the community.</p>
+            </div>
+            <div class="info-box">
+                <h2>Current Weather</h2>
+                <p>Accra, Ghana</p>
+                <p>Temperature: 28°C</p>
+                <p>Condition: Partly Cloudy</p>
+            </div>
+            <div class="info-box">
+                <h2>Weather Forecast</h2>
+                <ul>
+                    <li>Monday: 30°C, Partly Cloudy</li>
+                    <li>Tuesday: 31°C, Partly Cloudy</li>
+                    <li>Wednesday: 32°C, Partly Cloudy</li>
+                    <li>Thursday: 33°C, Partly Cloudy</li>
+                    <li>Friday: 34°C, Partly Cloudy</li>
+                </ul>
+            </div>
+        </section>
         <section id="directory">
             <h2>Member Directory</h2>
             <button id="toggle-view">Toggle List View</button>
@@ -58,17 +86,16 @@
                    (233) 55-230-0123
                 </p>
             </div>
+            
             <div class="footer-icons">
-                <a href="#"><img src="images/facebook.webp" alt="Facebook" loading="lazy"></a>
-                <a href="#"><img src="images/twitter.webp" alt="Twitter" loading="lazy"></a>
-                <a href="#"><img src="images/linkedIn.webp" alt="LinkedIn" loading="lazy"></a>
+                <a href="#"><img src="images/facebook.webp" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedIn.webp" alt="LinkedIn"></a>
             </div>
+            
             <div class="footer-right">
-                <p>WDD231 Class Project<br>
-                   Elizabeth Ann Adjabeng<br>
-                   © <span id="currentyear"></span> Accra Chamber of Commerce<br>
-                   Last Modification: <span id="lastModified"></span>
-                </p>
+                <p>&copy; <span id="currentyear"></span> Elizabeth Ann Adjabeng. Ghana.</p>
+                <p id="lastModified"></p>
             </div>
         </div>
     </footer>
