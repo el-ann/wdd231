@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const lastModified = document.lastModified;
-    document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+    // Footer updates
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Navigation toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+    });
+
+    // Fetch members
+    getMembers();
 });
 
 const memberList = document.getElementById('member-list');
@@ -28,12 +39,11 @@ function displayMembers(members) {
         card.classList.add('business-card');
         card.innerHTML = `
             <h3>${member.name}</h3>
-            <img src="${member.image}" alt="${member.name} logo" loading="lazy">
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a></p>
+            <p>${member.additionalInfo}</p>
+            <p>Email: <a href="mailto:${member.email || ''}">${member.email || 'N/A'}</a></p>
+            <p>Phone: ${member.phone}</p>
+            <p>URL: <a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a></p>
             <p>Membership Level: ${levelMap[member.membershipLevel] || 'Unknown'}</p>
-            <p>${member.additionalInfo || ''}</p>
         `;
         memberList.appendChild(card);
     });
@@ -52,5 +62,3 @@ toggleButton.addEventListener('click', () => {
         toggleButton.textContent = 'Toggle List View';
     }
 });
-
-getMembers();
