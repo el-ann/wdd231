@@ -8,6 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
  html {
+<<<<<<< HEAD
    line-height: 1.15; /* 1 */
    -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -20,26 +21,56 @@
 */
 body {
    margin: 0;
+=======
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+    margin: 0;
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
 }
 
 /* ... (other sections unchanged) ... */
 
 /* Forms
+<<<<<<< HEAD
   ========================================================================== */
 
 /**
 * 1. Change the font styles in all browsers.
 * 2. Remove the margin in Firefox and Safari.
 */
+=======
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
 button,
 input,
 optgroup,
 select,
 textarea {
+<<<<<<< HEAD
    font-family: inherit; /* 1 */
    font-size: 100%; /* 1 */
    line-height: 1.15; /* 1 */
    margin: 0; /* 2 */
+=======
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
 }
 
 /* ... (rest unchanged) ... */
