@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1d0365;
-    --accent-color: #4caf4f;
+    --accent-color: #225824;
     --background-color: #f4f4f4;
     --text-color: #333;
     --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,11 +21,10 @@ header {
     align-items: center;
     background: var(--primary-color);
     color: white;
-    padding: 15px 20px;
+    padding: 20px;
 }
 
 header h1 {
-    margin: 0;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -36,12 +35,11 @@ header .logo {
 }
 
 header .logo img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-right: 10px;
-    position: absolute;
-    left: 20px;
-    top: 15px;
 }
 
 .logo h1 {
@@ -60,14 +58,6 @@ header .logo img {
     position: absolute;
     right: 20px;
     top: 15px;
-}
-
-#menu::before {
-    content: "☰";
-}
-
-#menu.open::before {
-    content: "❌";
 }
 
 .nav-menu ul {
@@ -210,7 +200,7 @@ header .logo img {
 footer {
     background: var(--primary-color);
     color: white;
-    padding: 15px;
+    padding: 2px;
     text-align: center;
 }
 
@@ -237,6 +227,10 @@ footer {
     min-width: 250px;
 }
 
+.footer-left a {
+    color: white;
+}
+
 .footer-icons {
     display: flex;
     justify-content: center;
@@ -248,11 +242,3 @@ footer {
     width: 30px;
     height: 30px;
 }
-
-footer {
-    text-align: center;
-    background: #1d0365;
-    color: white;
-    padding: 15px;
-}
-

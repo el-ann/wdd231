@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Footer updates
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-    // Hamburger menu toggle
     const hamButton = document.querySelector('#menu');
     const navigation = document.querySelector('.nav-menu');
     hamButton.addEventListener('click', () => {
@@ -11,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         hamButton.classList.toggle('open');
     });
 
-    // Fetch and display members
     getMembers();
 });
 
