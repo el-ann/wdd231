@@ -1,6 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const lastModified = document.lastModified;
-    document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+document.addEventListener("DOMContentLoaded", () => {
+    // Footer updates
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+
+    // Hamburger menu toggle
+    const hamButton = document.querySelector('#menu');
+    const navigation = document.querySelector('.nav-menu');
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+    });
+
+    // Fetch and display members
+    getMembers();
 });
 
 const memberList = document.getElementById('member-list');
@@ -9,9 +21,7 @@ const toggleButton = document.getElementById('toggle-view');
 async function getMembers() {
     try {
         const response = await fetch('data/members.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const members = await response.json();
         displayMembers(members);
     } catch (error) {
@@ -25,32 +35,22 @@ function displayMembers(members) {
     const levelMap = { 1: 'Member', 2: 'Silver', 3: 'Gold' };
     members.forEach(member => {
         const card = document.createElement('div');
-        card.classList.add('business-card');
         card.innerHTML = `
             <h3>${member.name}</h3>
             <img src="${member.image}" alt="${member.name} logo" loading="lazy">
             <p>${member.address}</p>
-            <p>${member.phone}</p>
+            <p>Phone: ${member.phone}</p>
+            <p><a href="mailto:${member.email || ''}">${member.email || 'N/A'}</a></p>
             <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a></p>
             <p>Membership Level: ${levelMap[member.membershipLevel] || 'Unknown'}</p>
             <p>${member.additionalInfo || ''}</p>
         `;
         memberList.appendChild(card);
     });
-    memberList.classList.add('grid-view');
-    toggleButton.textContent = 'Toggle List View';
 }
 
 toggleButton.addEventListener('click', () => {
-    if (memberList.classList.contains('grid-view')) {
-        memberList.classList.remove('grid-view');
-        memberList.classList.add('list-view');
-        toggleButton.textContent = 'Toggle Grid View';
-    } else {
-        memberList.classList.remove('list-view');
-        memberList.classList.add('grid-view');
-        toggleButton.textContent = 'Toggle List View';
-    }
+    memberList.classList.toggle('grid-view');
+    memberList.classList.toggle('list-view');
+    toggleButton.textContent = memberList.classList.contains('grid-view') ? 'Toggle List View' : 'Toggle Grid View';
 });
-
-getMembers();
