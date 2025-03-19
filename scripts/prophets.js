@@ -2,6 +2,9 @@ const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophet
 const cards = document.querySelector('#cards');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
 async function getProphetData() {
   const response = await fetch(url);
   const data = await response.json();
@@ -36,6 +39,9 @@ const displayProphets = (prophets) => {
   });
 };
 
+<<<<<<< HEAD
+getProphetData();
+=======
 getProphetData();
 =======
 let allProphets = [];
@@ -125,3 +131,4 @@ document.getElementById('fifteen').addEventListener('click', () => {
 // Initial Fetch
 getProphetData();
 >>>>>>> 8e689d066dff081273ea7231be519738729d8dd1
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6

@@ -6,8 +6,12 @@
         "website": "https://www.melcom.com.gh",
         "image": "images/melcom.webp",
         "membershipLevel": 2,
+<<<<<<< HEAD
+        "additionalInfo": "Leading retail chain"
+=======
         "additionalInfo": "Leading retail chain",
         "email": "info@melcom.com.gh"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     },
     {
         "name": "Accra Brewery",
@@ -16,8 +20,12 @@
         "website": "https://www.accra-brewery.com",
         "image": "images/accra-brewery.webp",
         "membershipLevel": 3,
+<<<<<<< HEAD
+        "additionalInfo": "Quality beverages"
+=======
         "additionalInfo": "Quality beverages",
         "email": "contact@accra-brewery.com"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     },
     {
         "name": "Ghana Commercial Bank",
@@ -26,8 +34,12 @@
         "website": "https://www.gcbbank.com.gh",
         "image": "images/gcb.webp",
         "membershipLevel": 3,
+<<<<<<< HEAD
+        "additionalInfo": "Premier banking services"
+=======
         "additionalInfo": "Premier banking services",
         "email": "info@gcbbank.com.gh"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     },
     {
         "name": "MTN Ghana",
@@ -36,8 +48,12 @@
         "website": "https://www.mtn.com.gh",
         "image": "images/mtn.webp",
         "membershipLevel": 3,
+<<<<<<< HEAD
+        "additionalInfo": "Leading telecom provider"
+=======
         "additionalInfo": "Leading telecom provider",
         "email": "support@mtn.com.gh"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     },
     {
         "name": "Buka Restaurant",
@@ -46,8 +62,12 @@
         "website": "https://www.bukarestaurant.com",
         "image": "images/buka.webp",
         "membershipLevel": 1,
+<<<<<<< HEAD
+        "additionalInfo": "Authentic Ghanaian cuisine"
+=======
         "additionalInfo": "Authentic Ghanaian cuisine",
         "email": "info@bukarestaurant.com"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     },
     {
         "name": "Labadi Beach Hotel",
@@ -56,8 +76,12 @@
         "website": "https://www.labadibeachhotel.com",
         "image": "images/labadi-beach.webp",
         "membershipLevel": 2,
+<<<<<<< HEAD
+        "additionalInfo": "Luxury beachfront accommodation"
+=======
         "additionalInfo": "Luxury beachfront accommodation",
         "email": "reservations@labadibeachhotel.com"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     },
     {
         "name": "Fan Milk Limited",
@@ -66,7 +90,11 @@
         "website": "https://www.fanmilk-gh.com",
         "image": "images/fanmilk.webp",
         "membershipLevel": 2,
+<<<<<<< HEAD
+        "additionalInfo": "Dairy products manufacturer"
+=======
         "additionalInfo": "Dairy products manufacturer",
         "email": "info@fanmilk-gh.com"
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     }
 ]

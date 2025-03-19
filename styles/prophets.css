@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +9,8 @@ body {
   }
   
   header {
+<<<<<<< HEAD
+=======
 =======
 * {
     font-family: 'Lora', serif;
@@ -20,6 +25,7 @@ body {
   
 header {
 >>>>>>> 8e689d066dff081273ea7231be519738729d8dd1
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     background-color: #004080;
     color: white;
     padding: 1rem;
@@ -29,15 +35,24 @@ header {
   
   main {
 =======
+<<<<<<< HEAD
+  }
+  
+  main {
+=======
 }
   
 main {
 >>>>>>> 8e689d066dff081273ea7231be519738729d8dd1
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 1rem;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
   }
   
   #cards {
@@ -71,6 +86,8 @@ main {
     background-color: #004080;
     color: white;
   }
+<<<<<<< HEAD
+=======
 =======
 }
   
@@ -143,4 +160,5 @@ footer {
     color: white;
 }
 >>>>>>> 8e689d066dff081273ea7231be519738729d8dd1
+>>>>>>> 3c8fe5b0c7d41c8470b25d928d059436757cc4a6
   
