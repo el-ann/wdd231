@@ -1,0 +1,381 @@
+/* Define custom properties for theming */
+:root {
+    --primary-color: #1d0365; /* Dark blue for header/footer */
+    --accent-color: #225824; /* Green for buttons and hover effects */
+    --background-color: #f4f4f4; /* Light gray background */
+    --text-color: #333; /* Dark text for readability */
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+/* Reset and base styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Navigation styles */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+#menu:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+.nav-menu a.current {
+    border-bottom: 2px solid var(--accent-color);
+    font-weight: 700;
+}
+
+/* Hero section (used in both index.html and directory.html) */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    background-color: #000000c5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin: 0 0 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-style: oblique;
+    margin: 0 0 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Info boxes (Events, Weather, Forecast - used in both pages) */
+.info-boxes {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.info-box h2 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-box li {
+    margin: 5px 0;
+}
+
+#forecast {
+    margin-top: 10px;
+}
+
+#forecast h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+#forecast ul {
+    list-style: none;
+    padding: 0;
+}
+
+#forecast li {
+    margin: 5px 0;
+}
+
+/* Spotlights section (index.html) */
+#spotlights {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#spotlights h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+#spotlight-list.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#spotlight-list div {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+#spotlight-list img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+#spotlight-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#spotlight-list a:hover {
+    color: var(--accent-color);
+}
+
+/* Directory section (directory.html) */
+#directory {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#directory h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+#toggle-view {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    border-radius: var(--border-radius);
+}
+
+#toggle-view:hover {
+    background-color: #45a049;
+}
+
+#member-list.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#member-list.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+#member-list div {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+#member-list.list-view div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#member-list img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+#member-list.list-view img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+#member-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#member-list a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer styles */
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-right,
+.footer-icons {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-left,
+.footer-right {
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    color: var(--accent-color);
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+}
