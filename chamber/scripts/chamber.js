@@ -1,4 +1,3 @@
-// Initialize page when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     // Set footer dynamic content
     const currentYear = document.getElementById("currentyear");
@@ -144,8 +143,8 @@ const forecastList = document.querySelector("#forecast-list");
 
 // OpenWeatherMap API settings
 const myKey = "de62efe665b5c2309b3af4e71f9399bd";
-const myLat = "5.56"; // Rounded to 2 decimal places
-const myLong = "-0.19"; // Rounded to 2 decimal places
+const myLat = "5.56";
+const myLong = "-0.19"; 
 
 const currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
@@ -156,7 +155,7 @@ async function apiFetch() {
         // Fetch current weather
         const currentResponse = await fetch(currentUrl);
         if (!currentResponse.ok) {
-            throw new Error(await currentResponse.text());
+            throw Error(await currentResponse.text());
         }
         const currentData = await currentResponse.json();
         console.log("Current Weather:", currentData);
@@ -165,7 +164,7 @@ async function apiFetch() {
         // Fetch forecast
         const forecastResponse = await fetch(forecastUrl);
         if (!forecastResponse.ok) {
-            throw new Error(await forecastResponse.text());
+            throw Error(await forecastResponse.text());
         }
         const forecastData = await forecastResponse.json();
         console.log("Forecast:", forecastData);

@@ -1,9 +1,10 @@
-/* Define custom properties for theming */
+@import url("normalize.css");
+
 :root {
-    --primary-color: #1d0365; /* Dark blue for header/footer */
-    --accent-color: #225824; /* Green for buttons and hover effects */
-    --background-color: #f4f4f4; /* Light gray background */
-    --text-color: #333; /* Dark text for readability */
+    --primary-color: #1d0365;
+    --accent-color: #225824;
+    --background-color: #f4f4f4;
+    --text-color: #333;
     --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
 }
@@ -15,7 +16,6 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: var(--background-color);
-    line-height: 1.6;
 }
 
 /* Header styles */
