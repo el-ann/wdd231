@@ -42,7 +42,7 @@ async function getMembers() {
     try {
         const response = await fetch("data/members.json");
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw Error(`HTTP error! Status: ${response.status}`);
         }
         const members = await response.json();
         // Display all members for directory page
@@ -137,14 +137,14 @@ if (toggleButton && memberList) {
 
 // Select elements for weather (used in both pages)
 const currentTemp = document.querySelector("#current-temp");
-const weatherIcon = document.querySelector("#weather-icon");
+const weatherIconContainer = document.querySelector("#weather-icon-container");
 const captionDesc = document.querySelector("figcaption");
 const forecastList = document.querySelector("#forecast-list");
 
 // OpenWeatherMap API settings
 const myKey = "de62efe665b5c2309b3af4e71f9399bd";
-const myLat = "5.56";
-const myLong = "-0.19"; 
+const myLat = "5.56"; // Accra, Ghana
+const myLong = "-0.19";
 
 const currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
@@ -183,7 +183,7 @@ async function apiFetch() {
     }
 }
 
-// Display current weather
+// Display current weather (aligned with test file)
 function displayCurrentWeather(data) {
     if (currentTemp) {
         currentTemp.innerHTML = `${data.main.temp} °C`;
@@ -193,10 +193,14 @@ function displayCurrentWeather(data) {
         captionDesc.textContent =
             description.charAt(0).toUpperCase() + description.slice(1);
     }
-    if (weatherIcon) {
+    if (weatherIconContainer) {
+        // Create the img element dynamically
+        const weatherIcon = document.createElement("img");
+        weatherIcon.id = "weather-icon";
         const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         weatherIcon.setAttribute("src", iconSrc);
-        weatherIcon.setAttribute("alt", data.weather[0].description);
+        weatherIcon.setAttribute("alt", description);
+        weatherIconContainer.appendChild(weatherIcon);
     }
 }
 
@@ -219,6 +223,8 @@ function displayForecast(data) {
             dailyForecasts.push({
                 date: entryDate,
                 temp: entry.main.temp,
+                icon: entry.weather[0].icon,
+                desc: entry.weather[0].description,
             });
             currentDay = entryDay;
             daysAdded++;
@@ -231,7 +237,10 @@ function displayForecast(data) {
         const dayName = forecast.date.toLocaleDateString("en-US", {
             weekday: "long",
         });
-        li.textContent = `${dayName}: ${forecast.temp} °C`;
+        li.innerHTML = `
+            ${dayName}: ${forecast.temp} °C
+            <img src="https://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.desc}" style="width: 30px; vertical-align: middle;">
+        `;
         forecastList.appendChild(li);
     });
 
