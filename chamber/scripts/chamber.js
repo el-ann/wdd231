@@ -135,121 +135,82 @@ if (toggleButton && memberList) {
     });
 }
 
-// Select elements for weather (used in both pages)
+// Weather
 const currentTemp = document.querySelector("#current-temp");
 const weatherIconContainer = document.querySelector("#weather-icon-container");
-const captionDesc = document.querySelector("figcaption");
+const captionDesc = document.querySelector("#weather-desc");
 const forecastList = document.querySelector("#forecast-list");
 
-// OpenWeatherMap API settings
-const myKey = "de62efe665b5c2309b3af4e71f9399bd";
-const myLat = "5.56"; // Accra, Ghana
+const myKey = "6617ad94b410255f843d41506d52b0d5"; // Move to server-side in production
+const myLat = "5.56";
 const myLong = "-0.19";
-
 const currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
 
-// Fetch weather data
 async function apiFetch() {
     try {
-        // Fetch current weather
         const currentResponse = await fetch(currentUrl);
-        if (!currentResponse.ok) {
-            throw Error(await currentResponse.text());
-        }
+        if (!currentResponse.ok) throw new Error("Current weather fetch failed");
         const currentData = await currentResponse.json();
-        console.log("Current Weather:", currentData);
         displayCurrentWeather(currentData);
 
-        // Fetch forecast
         const forecastResponse = await fetch(forecastUrl);
-        if (!forecastResponse.ok) {
-            throw Error(await forecastResponse.text());
-        }
+        if (!forecastResponse.ok) throw new Error("Forecast fetch failed");
         const forecastData = await forecastResponse.json();
-        console.log("Forecast:", forecastData);
         displayForecast(forecastData);
     } catch (error) {
-        console.error("Error fetching weather:", error);
-        if (currentTemp) {
-            currentTemp.textContent = "N/A";
-        }
-        if (captionDesc) {
-            captionDesc.textContent = "Unable to load weather data";
-        }
-        if (forecastList) {
-            forecastList.innerHTML = "<li>Unable to load forecast</li>";
-        }
+        console.error("Weather error:", error.message);
+        if (currentTemp) currentTemp.textContent = "N/A";
+        if (captionDesc) captionDesc.textContent = "Unable to load weather";
+        if (forecastList) forecastList.innerHTML = "<li>Unable to load forecast</li>";
     }
 }
 
-// Display current weather (aligned with test file)
 function displayCurrentWeather(data) {
-    if (currentTemp) {
-        currentTemp.innerHTML = `${data.main.temp} °C`;
-    }
+    if (currentTemp) currentTemp.innerHTML = `${Math.round(data.main.temp)} °C`;
     if (captionDesc) {
-        const description = data.weather[0].description;
-        captionDesc.textContent =
-            description.charAt(0).toUpperCase() + description.slice(1);
+        const desc = data.weather[0].description;
+        captionDesc.textContent = desc.charAt(0).toUpperCase() + desc.slice(1);
     }
     if (weatherIconContainer) {
-        // Create the img element dynamically
-        const weatherIcon = document.createElement("img");
-        weatherIcon.id = "weather-icon";
-        const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        weatherIcon.setAttribute("src", iconSrc);
-        weatherIcon.setAttribute("alt", description);
-        weatherIconContainer.appendChild(weatherIcon);
+        weatherIconContainer.innerHTML = "";
+        const img = document.createElement("img");
+        img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        img.alt = data.weather[0].description;
+        weatherIconContainer.appendChild(img);
     }
 }
 
-// Display 3-day forecast
 function displayForecast(data) {
     if (!forecastList) return;
     forecastList.innerHTML = "";
-    const dailyForecasts = [];
-    const today = new Date();
-    let currentDay = today.getDate();
-    let daysAdded = 0;
+    const today = new Date().getDate();
+    const seenDays = new Set([today]);
+    const forecasts = [];
 
-    // Filter forecast to get one entry per day (at 12:00 PM) for the next 3 days
     for (const entry of data.list) {
         const entryDate = new Date(entry.dt * 1000);
         const entryDay = entryDate.getDate();
-        const entryHour = entryDate.getHours();
-
-        if (entryHour === 12 && entryDay !== currentDay && daysAdded < 3) {
-            dailyForecasts.push({
+        if (!seenDays.has(entryDay) && forecasts.length < 3) {
+            forecasts.push({
                 date: entryDate,
-                temp: entry.main.temp,
+                temp: Math.round(entry.main.temp),
                 icon: entry.weather[0].icon,
-                desc: entry.weather[0].description,
+                desc: entry.weather[0].description
             });
-            currentDay = entryDay;
-            daysAdded++;
+            seenDays.add(entryDay);
         }
+        if (forecasts.length === 3) break;
     }
 
-    // Display the forecast
-    dailyForecasts.forEach((forecast) => {
+    forecasts.forEach(f => {
         const li = document.createElement("li");
-        const dayName = forecast.date.toLocaleDateString("en-US", {
-            weekday: "long",
-        });
         li.innerHTML = `
-            ${dayName}: ${forecast.temp} °C
-            <img src="https://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.desc}" style="width: 30px; vertical-align: middle;">
+            ${f.date.toLocaleDateString("en-US", { weekday: "long" })}: ${f.temp} °C
+            <img src="https://openweathermap.org/img/wn/${f.icon}.png" alt="${f.desc}" style="width: 30px; vertical-align: middle;">
         `;
         forecastList.appendChild(li);
     });
-
-    // Fallback if not enough forecast data
-    if (dailyForecasts.length < 3) {
-        const li = document.createElement("li");
-        li.textContent = "Not enough forecast data available";
-        forecastList.appendChild(li);
-    }
 }
 
 // Call the weather fetch function
