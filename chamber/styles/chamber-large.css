@@ -71,6 +71,14 @@
         order: 3;
         text-align: center;
     }
+
+    .join-content {
+        flex-direction: column;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (min-width: 769px) {

@@ -383,3 +383,181 @@ footer {
     width: 30px;
     height: 30px;
 }
+
+
+/* Join Page Styles */
+.join-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#join-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+#join-form fieldset {
+    border: none;
+    padding: 0;
+}
+
+#join-form legend {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+#join-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#join-form input,
+#join-form select,
+#join-form textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+#join-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#join-form input[type="submit"] {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#join-form input[type="submit"]:hover {
+    background: #45a049;
+}
+
+/* Membership Cards */
+.membership-cards {
+    flex: 1;
+    min-width: 300px;
+}
+
+.membership-cards h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    animation: slideIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin: 0 0 10px;
+}
+
+.card a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+}
+
+.modal-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Thank You Page */
+.thankyou-content {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form-data {
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: left;
+    margin: 20px 0;
+}
+
+#form-data p {
+    margin: 10px 0;
+}

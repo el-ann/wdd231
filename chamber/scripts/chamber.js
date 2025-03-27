@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch weather data
     apiFetch();
-});
+    
 
 // Select elements for member directory (directory.html)
 const memberList = document.getElementById("member-list");
@@ -215,3 +215,48 @@ function displayForecast(data) {
 
 // Call the weather fetch function
 apiFetch();
+
+    // Set timestamp on join page
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+
+    // Modal functionality
+    const modalLinks = document.querySelectorAll(".modal-link");
+    const modals = document.querySelectorAll(".modal");
+    const closeButtons = document.querySelectorAll(".close");
+
+    modalLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const modalId = link.getAttribute("href").substring(1);
+            const modal = document.getElementById(modalId);
+            if (modal) modal.style.display = "block";
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modal = button.closest(".modal");
+            if (modal) modal.style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", (e) => {
+        modals.forEach(modal => {
+            if (e.target === modal) modal.style.display = "none";
+        });
+    });
+
+    // Display form data on thank you page
+    if (window.location.pathname.includes("thankyou.html")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("display-firstname").textContent = urlParams.get("firstname") || "N/A";
+        document.getElementById("display-lastname").textContent = urlParams.get("lastname") || "N/A";
+        document.getElementById("display-email").textContent = urlParams.get("email") || "N/A";
+        document.getElementById("display-phone").textContent = urlParams.get("phone") || "N/A";
+        document.getElementById("display-businessname").textContent = urlParams.get("businessname") || "N/A";
+        document.getElementById("display-timestamp").textContent = urlParams.get("timestamp") || "N/A";
+    }
+});
