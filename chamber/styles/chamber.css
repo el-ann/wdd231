@@ -271,7 +271,6 @@ main h1 {
     color: white;
     border: none;
     cursor: pointer;
-    font-family: 'Lora', serif;
     border-radius: var(--border-radius);
 }
 
@@ -398,7 +397,7 @@ footer {
 #join-form {
     flex: 1;
     min-width: 300px;
-    background: #fff;
+    background: #f4f4f4;
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
@@ -469,13 +468,14 @@ footer {
 }
 
 .card {
-    background: #fff;
+    background: #f4f4f4;
     padding: 15px;
-    border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
     text-align: center;
     animation: slideIn 0.5s ease-out forwards;
     opacity: 0;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .card:nth-child(1) { animation-delay: 0.1s; }

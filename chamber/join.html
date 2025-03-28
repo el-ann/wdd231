@@ -83,6 +83,7 @@
                         <select name="membership" title="Select your membership level" required>
                             <option value="">Select a level</option>
                             <option value="nonprofit">Non-Profit Membership</option>
+                            <option value="bronze">Bronze Membership</option>
                             <option value="silver">Silver Membership</option>
                             <option value="gold">Gold Membership</option>
                         </select>
@@ -94,8 +95,7 @@
                     </label>
 
                     <input type="hidden" name="timestamp" id="timestamp">
-                    <input type="submit" value="Submit Application">
-                </fieldset>
+                    <input type="submit" value="Submit Application" aria-label="Submit membership application">                </fieldset>
             </form>
 
             <section class="membership-cards">
@@ -106,9 +106,14 @@
                         <p>No Fee - Community Support</p>
                         <a href="#nonprofit-modal" class="modal-link">Learn More</a>
                     </div>
+                    <div class="card" data-modal="bronze-modal">
+                        <h3>Bronze Membership</h3>
+                        <p>Basic Visibility</p>
+                        <a href="#bronze-modal" class="modal-link">Learn More</a>
+                    </div>
                     <div class="card" data-modal="silver-modal">
                         <h3>Silver Membership</h3>
-                        <p>Enhanced Visibility</p>
+                        <p>Enhanced Benefits</p>
                         <a href="#silver-modal" class="modal-link">Learn More</a>
                     </div>
                     <div class="card" data-modal="gold-modal">
@@ -123,8 +128,7 @@
         <!-- Modals -->
         <div id="nonprofit-modal" class="modal">
             <div class="modal-content">
-                <span class="close">×</span>
-                <h3>Non-Profit Membership Benefits</h3>
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Non-Profit Membership Benefits</h3>
                 <ul>
                     <li>No membership fee</li>
                     <li>Basic directory listing</li>
@@ -133,10 +137,20 @@
                 </ul>
             </div>
         </div>
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                    <li>Basic directory listing</li>
+                    <li>Access to networking luncheons</li>
+                    <li>Monthly publications access</li>
+                    <li>Discounted event tickets</li>
+                </ul>
+            </div>
+        </div>
         <div id="silver-modal" class="modal">
             <div class="modal-content">
-                <span class="close">×</span>
-                <h3>Silver Membership Benefits</h3>
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Silver Membership Benefits</h3>
                 <ul>
                     <li>Enhanced directory listing</li>
                     <li>Monthly publications access</li>
@@ -148,8 +162,7 @@
         </div>
         <div id="gold-modal" class="modal">
             <div class="modal-content">
-                <span class="close">×</span>
-                <h3>Gold Membership Benefits</h3>
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Gold Membership Benefits</h3>
                 <ul>
                     <li>All Silver benefits</li>
                     <li>Priority directory placement</li>

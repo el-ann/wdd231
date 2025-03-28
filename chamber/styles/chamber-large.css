@@ -47,9 +47,20 @@
         max-width: 100%;
     }
 
+    #member-list.grid-view {
+        grid-template-columns: 1fr; 
+    }
+
     #member-list.list-view div {
         flex-direction: column;
-        text-align: center;
+    }
+
+    #member-list.list-view div {
+        text-align: center; 
+    }
+
+    #toggle-view {
+        display: block; 
     }
 
     .footer-content {
@@ -75,7 +86,7 @@
     .join-content {
         flex-direction: column;
     }
-    
+
     .card-container {
         grid-template-columns: 1fr;
     }

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch weather data
     apiFetch();
-    
+
 
 // Select elements for member directory (directory.html)
 const memberList = document.getElementById("member-list");
@@ -125,14 +125,21 @@ function displaySpotlights(members) {
 }
 
 // Toggle grid/list view for directory page
-if (toggleButton && memberList) {
-    toggleButton.addEventListener("click", () => {
-        memberList.classList.toggle("grid-view");
-        memberList.classList.toggle("list-view");
-        toggleButton.textContent = memberList.classList.contains("grid-view")
-            ? "Toggle List View"
-            : "Toggle Grid View";
-    });
+    if (toggleButton && memberList) {
+        memberList.classList.add("grid-view"); // Ensure initial state
+        toggleButton.textContent = "Toggle List View";
+        toggleButton.setAttribute("aria-label", "Switch to list view");
+
+        toggleButton.addEventListener("click", () => {
+            memberList.classList.toggle("grid-view");
+            memberList.classList.toggle("list-view");
+            const isGridView = memberList.classList.contains("grid-view");
+            toggleButton.textContent = isGridView ? "Toggle List View" : "Toggle Grid View";
+            toggleButton.setAttribute(
+                "aria-label",
+                isGridView ? "Switch to list view" : "Switch to grid view"
+            );
+        });
 }
 
 // Weather
@@ -141,7 +148,7 @@ const weatherIconContainer = document.querySelector("#weather-icon-container");
 const captionDesc = document.querySelector("#weather-desc");
 const forecastList = document.querySelector("#forecast-list");
 
-const myKey = "6617ad94b410255f843d41506d52b0d5"; // Move to server-side in production
+const myKey = "6617ad94b410255f843d41506d52b0d5";
 const myLat = "5.56";
 const myLong = "-0.19";
 const currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&units=metric&appid=${myKey}`;
