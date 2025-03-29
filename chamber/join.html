@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Accra Chamber of Commerce - Apply for membership today!">
+    <meta name="author" content="Elizabeth Ann Adjabeng">
+    <title>Accra Chamber of Commerce - Join</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Accra Chamber of Commerce Join">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="business-logo.webp">
+    <meta property="og:url" content="join.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/business-logo.webp" alt="Accra Chamber of Commerce Logo" loading="lazy">
+            <p>Accra<br>Chamber of Commerce</p>
+        </div>
+        <button type="button" id="menu">☰</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>Join the Accra Chamber of Commerce</h1>
+        </section>
+        <section class="join-content">
+            <form method="get" action="thankyou.html" id="join-form">
+                <fieldset>
+                    <legend>Membership Application</legend>
+
+                    <label>
+                        First Name
+                        <input type="text" name="firstname" title="Your first name" required autocomplete="given-name">
+                    </label>
+
+                    <label>
+                        Last Name
+                        <input type="text" name="lastname" title="Your last name" required autocomplete="family-name">
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="orgtitle" title="Your title within the organization" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" required>
+                    </label>
+
+                    <label>
+                        Email Address
+                        <input type="email" name="email" title="Your email address" required autocomplete="email" placeholder="example@domain.com">
+                    </label>
+
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" title="Your mobile phone number" required autocomplete="tel">
+                    </label>
+
+                    <label>
+                        Business/Organization Name
+                        <input type="text" name="businessname" title="Your business or organization name" required autocomplete="organization">
+                    </label>
+
+                    <label>
+                        Membership Level
+                        <select name="membership" title="Select your membership level" required>
+                            <option value="">Select a level</option>
+                            <option value="nonprofit">Non-Profit Membership</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business Description
+                        <textarea name="description" title="Describe your business or organization"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <input type="submit" value="Submit Application" aria-label="Submit membership application">                </fieldset>
+            </form>
+
+            <section class="membership-cards">
+                <h2>Membership Benefits</h2>
+                <div class="card-container">
+                    <div class="card" data-modal="nonprofit-modal">
+                        <h3>Non-Profit Membership</h3>
+                        <p>No Fee - Community Support</p>
+                        <a href="#nonprofit-modal" class="modal-link">Learn More</a>
+                    </div>
+                    <div class="card" data-modal="bronze-modal">
+                        <h3>Bronze Membership</h3>
+                        <p>Basic Visibility</p>
+                        <a href="#bronze-modal" class="modal-link">Learn More</a>
+                    </div>
+                    <div class="card" data-modal="silver-modal">
+                        <h3>Silver Membership</h3>
+                        <p>Enhanced Benefits</p>
+                        <a href="#silver-modal" class="modal-link">Learn More</a>
+                    </div>
+                    <div class="card" data-modal="gold-modal">
+                        <h3>Gold Membership</h3>
+                        <p>Premium Perks</p>
+                        <a href="#gold-modal" class="modal-link">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Modals -->
+        <div id="nonprofit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Non-Profit Membership Benefits</h3>
+                <ul>
+                    <li>No membership fee</li>
+                    <li>Basic directory listing</li>
+                    <li>Access to networking luncheons</li>
+                    <li>Community event invitations</li>
+                </ul>
+            </div>
+        </div>
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                    <li>Basic directory listing</li>
+                    <li>Access to networking luncheons</li>
+                    <li>Monthly publications access</li>
+                    <li>Discounted event tickets</li>
+                </ul>
+            </div>
+        </div>
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Silver Membership Benefits</h3>
+                <ul>
+                    <li>Enhanced directory listing</li>
+                    <li>Monthly publications access</li>
+                    <li>Discounted training sessions</li>
+                    <li>Social media mentions</li>
+                    <li>Sponsorship opportunities</li>
+                </ul>
+            </div>
+        </div>
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" role="button" aria-label="Close modal">×</span>                <h3>Gold Membership Benefits</h3>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Priority directory placement</li>
+                    <li>Exclusive training workshops</li>
+                    <li>Featured advertising on homepage</li>
+                    <li>Premium sponsorship at events</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Accra Chamber of Commerce</h3>
+                <p>53 Independence Avenue<br>
+                   Accra, Mail 258<br>
+                   <a href="mailto:info@accracc.org">info@accracc.org</a><br>
+                   (233) 55-230-0123
+                </p>
+            </div>
+            <div class="footer-icons">
+                <a href="#"><img src="images/facebook.webp" alt="Facebook" loading="lazy"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter" loading="lazy"></a>
+                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" loading="lazy"></a>
+            </div>
+            <div class="footer-right">
+                <p>&copy; <span id="currentyear"></span> Elizabeth Ann Adjabeng | WDD 231</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

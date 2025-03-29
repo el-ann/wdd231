@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Accra Chamber of Commerce!">
+    <meta name="author" content="Elizabeth Ann Adjabeng">
+    <title>Accra Chamber of Commerce - Thank You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Accra Chamber of Commerce Thank You">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/business-logo.webp">
+    <meta property="og:url" content="thankyou.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/business-logo.webp" alt="Accra Chamber of Commerce Logo" loading="lazy">
+            <p>Accra<br>Chamber of Commerce</p>
+        </div>
+        <button type="button" id="menu">☰</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>Thank You for Your Application!</h1>
+        </section>
+        <section class="thankyou-content">
+            <p>We appreciate your interest in joining the Accra Chamber of Commerce. Below is the information you submitted:</p>
+            <div id="form-data">
+                <p><strong>First Name:</strong> <span id="display-firstname"></span></p>
+                <p><strong>Last Name:</strong> <span id="display-lastname"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Mobile Phone:</strong> <span id="display-phone"></span></p>
+                <p><strong>Business Name:</strong> <span id="display-businessname"></span></p>
+                <p><strong>Submission Time:</strong> <span id="display-timestamp"></span></p>
+            </div>
+            <p>We’ll review your application and get back to you soon!</p>
+            <a href="index.html" class="cta-button">Return to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Accra Chamber of Commerce</h3>
+                <p>53 Independence Avenue<br>
+                   Accra, Mail 258<br>
+                   <a href="mailto:info@accracc.org">info@accracc.org</a><br>
+                   (233) 55-230-0123
+                </p>
+            </div>
+            <div class="footer-icons">
+                <a href="#"><img src="images/facebook.webp" alt="Facebook" loading="lazy"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter" loading="lazy"></a>
+                <a href="#"><img src="images/linkedIn.webp" alt="LinkedIn" loading="lazy"></a>
+            </div>
+            <div class="footer-right">
+                <p>&copy; <span id="currentyear"></span> Elizabeth Ann Adjabeng | WDD 231</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
