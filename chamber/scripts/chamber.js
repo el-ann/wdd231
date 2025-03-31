@@ -220,21 +220,38 @@ async function fetchDiscoverData() {
 function displayVisitMessage() {
     const visitText = document.getElementById("visit-text");
     if (!visitText) return;
-    const lastVisit = localStorage.getItem("lastVisit");
-    const now = Date.now();
-    const oneDay = 24 * 60 * 60 * 1000; // Milliseconds in a day
-    if (!lastVisit) {
-        visitText.textContent = "Welcome! Let us know if you have any questions.";
-    } else {
-        const timeDiff = now - parseInt(lastVisit);
-        const daysSince = Math.floor(timeDiff / oneDay);
-        if (daysSince < 1) {
-            visitText.textContent = "Back so soon! Awesome!";
+
+    try {
+        // Get the last visit timestamp from localStorage
+        const lastVisit = localStorage.getItem("lastVisit");
+        const now = Date.now();
+        const oneDay = 24 * 60 * 60 * 1000; // Milliseconds in a day
+
+        if (!lastVisit) {
+            // First visit
+            visitText.textContent = "Welcome! Let us know if you have any questions.";
         } else {
-            visitText.textContent = `You last visited ${daysSince} ${daysSince === 1 ? "day" : "days"} ago.`;
+            // Calculate the time difference
+            const timeDiff = now - parseInt(lastVisit);
+            if (timeDiff < 0) {
+                // Handle case where the user's clock might have been set back
+                visitText.textContent = "Welcome back! It looks like your system clock may have changed.";
+            } else {
+                const daysSince = Math.floor(timeDiff / oneDay);
+                if (daysSince < 1) {
+                    visitText.textContent = "Back so soon! Awesome!";
+                } else {
+                    visitText.textContent = `You last visited ${daysSince} ${daysSince === 1 ? "day" : "days"} ago.`;
+                }
+            }
         }
+
+        // Update the last visit timestamp
+        localStorage.setItem("lastVisit", now.toString());
+    } catch (error) {
+        console.error("Error accessing localStorage:", error);
+        visitText.textContent = "Welcome! Let us know if you have any questions.";
     }
-    localStorage.setItem("lastVisit", now);
 }
 
 // Weather API setup
