@@ -31,6 +31,12 @@ h2 {
     padding-bottom: 5px;
 }
 
+h3 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin: 10px 0 5px;
+}
+
 section {
     margin-bottom: 20px;
 }
@@ -52,6 +58,15 @@ ul {
     border: 1px solid #ccc;
 }
 
+.wireframe {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--secondary-color);
+    margin: 10px auto;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     text-align: center;
     color: #f9f9f9;
@@ -59,4 +74,19 @@ footer {
     font-size: 0.9rem;
     margin-top: 20px;
     padding: 10px;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 1.5rem; 
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+
+    .wireframe { 
+        max-width: 300px; 
+    }
 }
