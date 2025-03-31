@@ -1,0 +1,10 @@
+[
+    {"name": "Independence Arch", "image": "images/independence-arch.webp", "address": "Independence Square, Accra", "description": "A symbol of Ghana’s liberation, built in 1957."},
+    {"name": "Jamestown Lighthouse", "image": "images/jamestown-lighthouse.webp", "address": "High St, Jamestown", "description": "Historic lighthouse offering stunning views."},
+    {"name": "Labadi Beach", "image": "images/labadi-beach.webp", "address": "Labadi Road, Accra", "description": "Popular beach for relaxation and events."},
+    {"name": "Kwame Nkrumah Mausoleum", "image": "images/nkrumah-mausoleum.webp", "address": "High St, Accra", "description": "Memorial to Ghana’s first president."},
+    {"name": "Makola Market", "image": "images/makola-market.webp", "address": "Kojo Thompson Rd, Accra", "description": "Bustling market with local goods."},
+    {"name": "National Museum", "image": "images/national-museum.webp", "address": "Barnes Rd, Accra", "description": "Showcases Ghana’s history and culture."},
+    {"name": "Osu Castle", "image": "images/osu-castle.webp", "address": "Castle Rd, Osu", "description": "Former seat of government, rich in history."},
+    {"name": "Artists Alliance Gallery", "image": "images/artists-alliance.webp", "address": "La Rd, Accra", "description": "Hub for local art and crafts."}
+]

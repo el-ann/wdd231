@@ -1,7 +1,55 @@
+/* Media Queries */
+/* Small screens (320px - 640px) */
+@media (min-width: 320px) and (max-width: 640px) {
+    #discover-grid {
+        grid-template-areas: 
+            "card1" "card2" "card3" "card4" 
+            "card5" "card6" "card7" "card8";
+    }
+}
+
+/* Medium screens (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    #discover-grid {
+        grid-template-areas: 
+            "card1 card2" 
+            "card3 card4" 
+            "card5 card6" 
+            "card7 card8";
+        grid-template-columns: 1fr 1fr;
+    }
+    .discover-card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
+
+/* Large screens (1025px+) */
+@media (min-width: 1025px) {
+    #discover-grid {
+        grid-template-areas: 
+            "card1 card2 card3 card4" 
+            "card5 card6 card7 card8";
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .discover-card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
+
+/* Mobile adjustments (max-width: 768px) */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
         position: relative;
+    }
+
+    header .logo {
+        width: 100%;
+        justify-content: center;
     }
 
     #menu {
@@ -9,14 +57,19 @@
     }
 
     .nav-menu {
+        display: none;
         width: 100%;
     }
 
+    .nav-menu.open {
+        display: block;
+    }
+
     .nav-menu ul {
-        display: none;
         flex-direction: column;
         gap: 0;
-        background: #333;
+        background: var(--primary-color);
+        display: none;
     }
 
     .nav-menu.open ul {
@@ -27,6 +80,7 @@
         display: block;
         padding: 15px;
         width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-content {
@@ -48,19 +102,16 @@
     }
 
     #member-list.grid-view {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     #member-list.list-view div {
         flex-direction: column;
-    }
-
-    #member-list.list-view div {
-        text-align: center; 
+        text-align: center;
     }
 
     #toggle-view {
-        display: block; 
+        display: block;
     }
 
     .footer-content {
@@ -92,6 +143,7 @@
     }
 }
 
+/* Ensure navigation is visible on desktop (min-width: 769px) */
 @media (min-width: 769px) {
     .nav-menu ul {
         display: flex;

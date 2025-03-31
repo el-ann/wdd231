@@ -41,7 +41,7 @@ header .logo img {
     margin-right: 10px;
 }
 
-header p {
+header h1 {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
@@ -78,11 +78,12 @@ header p {
     color: white;
     padding: 10px;
     background-color: var(--primary-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-menu a:hover {
     color: var(--accent-color);
+    background-color: #2a1a8f; /* Slightly lighter shade of primary */
 }
 
 .nav-menu a.current {
@@ -92,10 +93,12 @@ header p {
 
 main h1 {
     text-align: center;
-    color: #1d0365;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 
-/* Hero section (used in both index.html and directory.html) */
+/* Hero section */
 .hero {
     position: relative;
     text-align: center;
@@ -105,6 +108,8 @@ main h1 {
 .hero img {
     width: 100%;
     height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .hero-content {
@@ -114,10 +119,9 @@ main h1 {
     transform: translate(-50%, -50%);
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    background-color: #000000c5;
+    background-color: rgba(0, 0, 0, 0.77);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .hero-content h2 {
@@ -127,7 +131,7 @@ main h1 {
 
 .hero-content p {
     font-size: 1.2rem;
-    font-style: oblique;
+    font-style: italic;
     margin: 0 0 15px;
 }
 
@@ -138,13 +142,14 @@ main h1 {
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #45a049;
 }
 
-/* Info boxes (Events, Weather, Forecast - used in both pages) */
+/* Info boxes */
 .info-boxes {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -164,7 +169,7 @@ main h1 {
 }
 
 .info-box h2 {
-    color: #000;
+    color: var(--primary-color); /* Consistent with main h1 */
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
@@ -201,7 +206,7 @@ main h1 {
     margin: 5px 0;
 }
 
-/* Spotlights section (index.html) */
+/* Spotlights section */
 #spotlights {
     padding: 20px;
     max-width: 1200px;
@@ -243,13 +248,14 @@ main h1 {
 #spotlight-list a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 #spotlight-list a:hover {
     color: var(--accent-color);
 }
 
-/* Directory section (directory.html) */
+/* Directory section */
 #directory {
     padding: 20px;
     max-width: 1200px;
@@ -272,6 +278,7 @@ main h1 {
     border: none;
     cursor: pointer;
     border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
 }
 
 #toggle-view:hover {
@@ -325,10 +332,91 @@ main h1 {
 #member-list a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 #member-list a:hover {
     color: var(--accent-color);
+}
+
+/* Discover section */
+.visit-message {
+    background: white;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+#discover-grid {
+    display: grid;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#discover-grid .fallback {
+    text-align: center;
+    color: var(--text-color);
+    padding: 1rem;
+    font-style: italic;
+}
+
+.discover-card {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+.discover-card:nth-child(1) { grid-area: card1; }
+.discover-card:nth-child(2) { grid-area: card2; }
+.discover-card:nth-child(3) { grid-area: card3; }
+.discover-card:nth-child(4) { grid-area: card4; }
+.discover-card:nth-child(5) { grid-area: card5; }
+.discover-card:nth-child(6) { grid-area: card6; }
+.discover-card:nth-child(7) { grid-area: card7; }
+.discover-card:nth-child(8) { grid-area: card8; }
+
+.discover-card h2 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+}
+
+.discover-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.discover-card address {
+    font-style: normal;
+    margin: 0.5rem 0;
+}
+
+.discover-card p {
+    margin: 0.5rem 0;
+}
+
+.discover-card button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.discover-card button:hover {
+    background: #45a049;
 }
 
 /* Footer styles */
@@ -358,13 +446,13 @@ footer {
 .footer-left,
 .footer-right {
     text-align: left;
-    flex: 1;
     min-width: 250px;
 }
 
 .footer-left a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-left a:hover {
@@ -375,14 +463,12 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex: 1;
 }
 
 .footer-icons img {
     width: 30px;
     height: 30px;
 }
-
 
 /* Join Page Styles */
 .join-content {
@@ -397,7 +483,7 @@ footer {
 #join-form {
     flex: 1;
     min-width: 300px;
-    background: #f4f4f4;
+    background: var(--background-color);
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
@@ -429,6 +515,7 @@ footer {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
+    box-sizing: border-box;
 }
 
 #join-form textarea {
@@ -443,6 +530,7 @@ footer {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 #join-form input[type="submit"]:hover {
@@ -468,7 +556,7 @@ footer {
 }
 
 .card {
-    background: #f4f4f4;
+    background: var(--background-color);
     padding: 15px;
     box-shadow: var(--card-shadow);
     text-align: center;
@@ -496,6 +584,7 @@ footer {
 .card a {
     color: var(--accent-color);
     text-decoration: none;
+    transition: text-decoration 0.3s ease;
 }
 
 .card a:hover {
@@ -561,3 +650,4 @@ footer {
 #form-data p {
     margin: 10px 0;
 }
+
