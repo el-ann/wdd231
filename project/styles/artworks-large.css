@@ -1,0 +1,57 @@
+@media (min-width: 768px) {
+    .nav-menu {
+        display: block;
+        position: static;
+        background: none;
+        width: auto;
+    }
+
+    .nav-menu ul {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .modal-content {
+        margin: 10% auto;
+    }
+
+    .hero-content {
+        padding: 2rem;
+    }
+
+    .slideshow {
+        height: 600px;
+    }
+
+    .weather, .submission-form {
+        width: 400px;
+    }
+
+    .submission-confirmation {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .attributions {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

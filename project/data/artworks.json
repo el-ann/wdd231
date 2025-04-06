@@ -1,0 +1,137 @@
+[
+    {
+        "title": "Vibrant Faces",
+        "artist": "Kofi Mensah",
+        "location": "Osu, Accra",
+        "lat": 5.55,
+        "lon": -0.18,
+        "image": "images/portrait.webp",
+        "bio": "Kofi Mensah is a renowned street artist in Accra, known for his colorful portraits."
+    },
+    {
+        "title": "Urban Dreams",
+        "artist": "Ama Serwaa",
+        "location": "Jamestown, Accra",
+        "lat": 5.53,
+        "lon": -0.21,
+        "image": "images/mural.webp",
+        "bio": "Ama Serwaa captures the spirit of Accra’s streets with her vibrant murals."
+    },
+    {
+        "title": "Cultural Echoes",
+        "artist": "Kwame Asante",
+        "location": "Labadi, Accra",
+        "lat": 5.57,
+        "lon": -0.15,
+        "image": "images/modern.webp",
+        "bio": "Kwame Asante blends traditional Ghanaian motifs with modern street art."
+    },
+    {
+        "title": "Rasta Road",
+        "artist": "Nana Yaw",
+        "location": "Nima, Accra",
+        "lat": 5.58,
+        "lon": -0.20,
+        "image": "images/rastafarian.webp",
+        "bio": "Nana Yaw uses bold colors to reflect the Rastafarian influence in Accra’s culture."
+    },
+    {
+        "title": "Market Hustle",
+        "artist": "Efua Danso",
+        "location": "Makola Market, Accra",
+        "lat": 5.55,
+        "lon": -0.20,
+        "image": "images/market.webp",
+        "bio": "Efua Danso paints the energy of Accra’s bustling markets in her work."
+    },
+    {
+        "title": "Drum Beats",
+        "artist": "Yaw Boateng",
+        "location": "Cantonments, Accra",
+        "lat": 5.60,
+        "lon": -0.18,
+        "image": "images/musical.webp",
+        "bio": "Yaw Boateng incorporates musical themes, celebrating Ghanaian traditions."
+    },
+    {
+        "title": "Sunset Smiles",
+        "artist": "Adwoa Osei",
+        "location": "East Legon, Accra",
+        "lat": 5.63,
+        "lon": -0.17,
+        "image": "images/daily.webp",
+        "bio": "Adwoa Osei’s art brings warmth and joy with her depictions of daily life."
+    },
+    {
+        "title": "Freedom Flight",
+        "artist": "Kojo Amoah",
+        "location": "Adabraka, Accra",
+        "lat": 5.56,
+        "lon": -0.21,
+        "image": "images/wings-mural.webp",
+        "bio": "Kojo Amoah uses birds and wings to symbolize freedom in his murals."
+    },
+    {
+        "title": "Ancestral Voices",
+        "artist": "Esi Kwarteng",
+        "location": "Tesano, Accra",
+        "lat": 5.60,
+        "lon": -0.23,
+        "image": "images/ancestral-art.webp",
+        "bio": "Esi Kwarteng draws inspiration from Akan proverbs and history."
+    },
+    {
+        "title": "City Pulse",
+        "artist": "Kwesi Owusu",
+        "location": "Abelemkpe, Accra",
+        "lat": 5.61,
+        "lon": -0.22,
+        "image": "images/urban-life.webp",
+        "bio": "Kwesi Owusu captures the heartbeat of Accra’s urban life in his art."
+    },
+    {
+        "title": "Golden Heritage",
+        "artist": "Akua Mensah",
+        "location": "Dzorwulu, Accra",
+        "lat": 5.61,
+        "lon": -0.20,
+        "image": "images/gold-inspired-art.webp",
+        "bio": "Akua Mensah celebrates Ghana’s rich history with gold-inspired designs."
+    },
+    {
+        "title": "Ocean Waves",
+        "artist": "Nii Laryea",
+        "location": "La, Accra",
+        "lat": 5.57,
+        "lon": -0.14,
+        "image": "images/ocean-themed-mural.webp",
+        "bio": "Nii Laryea’s coastal upbringing influences his ocean-themed murals."
+    },
+    {
+        "title": "Kente Colors",
+        "artist": "Abena Sarpong",
+        "location": "Madina, Accra",
+        "lat": 5.68,
+        "lon": -0.16,
+        "image": "images/kente.webp",
+        "bio": "Abena Sarpong integrates traditional Kente patterns into her street art."
+    },
+    {
+        "title": "Youth Rising",
+        "artist": "Tetteh Quarshie",
+        "location": "Airport Residential, Accra",
+        "lat": 5.61,
+        "lon": -0.18,
+        "image": "images/youth.webp",
+        "bio": "Tetteh Quarshie focuses on empowering youth through his vibrant art."
+    },
+    {
+        "title": "Night Lights",
+        "artist": "Maame Adjei",
+        "location": "Kokomlemle, Accra",
+        "lat": 5.58,
+        "lon": -0.21,
+        "image": "images/night-life.webp",
+        "bio": "Maame Adjei uses neon colors to depict Accra’s nightlife in her murals."
+    }
+]

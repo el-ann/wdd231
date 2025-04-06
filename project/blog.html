@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read updates on street art events and artist interviews in Accra, Ghana.">
+    <meta name="author" content="Elizabeth Ann Adjabeng">
+    <title>Accra Street Art Showcase | Blog</title>
+    <meta property="og:title" content="Accra Street Art Showcase | Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="blog.html">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/artworks.css">
+    <link rel="stylesheet" href="styles/artworks-large.css">
+    <script src="scripts/artworks.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="Accra Street Art Showcase Logo" loading="lazy">
+            <p>Accra Street Art Showcase</p>
+        </div>
+        <button type="button" id="menu">☰</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Street Art Blog</h1>
+        <section id="featured-post">
+            <h2>Featured Post</h2>
+            <div id="featured-content"></div>
+        </section>
+        <section id="blog-posts">
+            <h2>Latest Updates</h2>
+            <div id="blog-list">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+        <div id="blog-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" aria-label="Close modal">&times;</span>
+                <h2 id="blog-modal-title"></h2>
+                <p id="blog-modal-date"></p>
+                <p id="blog-modal-content"></p>
+            </div>
+        </div>
+        <button id="back-to-top" aria-label="Back to top">↑ Top</button>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> Elizabeth Ann Adjabeng | WDD 231</p>
+            <p id="lastModified"></p>
+            <p><a href="attributions.html">Attributions</a></p>
+        </div>
+    </footer>
+</body>
+</html>
