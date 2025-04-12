@@ -53,7 +53,10 @@ export function displayArtworks(artworks, galleryList) {
 
 export function populateFilters(artworks, artistFilter, locationFilter) {
     if (!artistFilter || !locationFilter) {
-        console.warn("Filter elements not found");
+        console.warn("Filter elements not found:", {
+            artistFilter: artistFilter,
+            locationFilter: locationFilter
+        });
         return;
     }
     const artists = [...new Set(artworks.map(art => art.artist).filter(Boolean))];
